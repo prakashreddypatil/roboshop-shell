@@ -1,6 +1,12 @@
 echo -e "\e[35minstalling nginx\e[0m"
 yum install nginx -y
 
+echo -e "\e[35enabling nginx\e[0m"
+systemctl enable nginx
+
+echo -e "\e[35starting nginx\e[0m"
+systemctl start nginx
+
 echo -e "\e[35removing old content\e[0m"
 rm -rf /usr/share/nginx/html/*
 
