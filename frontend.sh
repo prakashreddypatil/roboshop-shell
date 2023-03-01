@@ -1,5 +1,5 @@
 code_dir=$(pwd)
-log_file=/temp/robosho.log
+log_file=/temp/roboshop.log
 rm -f ${log_file}
 
 echo -e "\e[35installing nginx\e[0m"
