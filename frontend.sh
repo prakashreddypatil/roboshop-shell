@@ -9,7 +9,7 @@ echo -e "\e[35mremoving old content\e[0m"
 rm -rf /usr/share/nginx/html/*  &>>${log_file}
 
 echo -e "\e[35mdownloading frontend\e[0m"
-curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
+curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip  &>>${log_file}
 
 echo -e "\e[35mextracting  download frontend\e[0m"
 cd  /usr/share/nginx/html
