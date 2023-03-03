@@ -6,7 +6,7 @@ print_head() {
 }
 
 print_head " copying the repo file"
-cp configs/mongodb.repo /etc/yum.repos.d/mongodb.repo &>>${log_file}
+cp configs/mongodb.repo /etc/yum.repos.d/mongodb.repo   &>>${log_file}
 
 print_head " installing mongodb"
 yum install mongodb-org -y  &>>${log_file}
