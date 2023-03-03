@@ -5,10 +5,10 @@ print_head() {
   echo -e "\e[35m$1\e[0m"
 }
 print_head "configure nodejs repo"
-curl -sL https://rpm.nodesource.com/setup_lts.x | bash  $>>${log_file}
+curl -sL https://rpm.nodesource.com/setup_lts.x | bash   &>>${log_file}
 
 print_head "install nodjs"
-yum install nodejs -y  &>>${log_file}
+yum install nodejs -y   &>>${log_file}
 
 print_head "create roboshop user"
 useradd roboshop  &>>${log_file}
