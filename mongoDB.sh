@@ -17,7 +17,7 @@ systemctl enable mongod  &>>${log_file}
 print_head " starting momgodb server"
 systemctl start mongod  &>>${log_file}
 
-print_head " updating listin address"
+print_head " updating listing address"
 ## Update listen address from 127.0.0.1 to 0.0.0.0 in /etc/mongodb.conf
 
 print_head " restarting the server "
