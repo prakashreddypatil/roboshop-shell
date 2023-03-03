@@ -21,13 +21,12 @@ rm -rf /app/*  &>>${log_file}
 
 print_head  "download the app content"
 curl -L -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip  &>>${log_file}
-
-cd /app  &>>${log_file}
+cd /app
 
 print_head  "extracting the content"
 unzip /tmp/catalogue.zip   &>>${log_file}
 
-cd /app    &>>${log_file}
+
 
 print_head  "installing the nodejs dependencies"
 npm install &>>${log_file}
