@@ -1,10 +1,5 @@
-code_dir=$(pwd)
-log_file=/tmp/roboshop.log
-rm -f ${log_file}
+source common.sh
 
-print_head() {
-  echo -e "\e[35m$1\e[0m"
-}
 print_head "configure nodejs repo"
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash   &>>${log_file}
 
