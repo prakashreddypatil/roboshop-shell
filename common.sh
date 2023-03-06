@@ -12,6 +12,6 @@ then
   echo sucess
   else
   echo FAILURE
-  exit
+  exit 1
   fi
 }
