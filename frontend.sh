@@ -1,12 +1,12 @@
 source common.sh
 
 print_head "installing nginx"
-yum install nginx -y &>>${log_file}
+yum install nginx -y  &>>${log_file}
 if [ $? -eq 0 ]
 then
   echo sucess
   else
-  echo not sucess
+  echo FAILURE
   fi
 
 print_head "removing old content"
@@ -15,7 +15,7 @@ if [ $? -eq 0 ]
 then
   echo sucess
   else
-  echo not sucess
+  echo FAILURE
   fi
 
 print_head  "downloading frontend"
@@ -24,7 +24,7 @@ if [ $? -eq 0 ]
 then
   echo sucess
   else
-  echo not sucess
+  echo FAILURE
   fi
 
 print_head "extracting  download frontend"
@@ -34,7 +34,7 @@ if [ $? -eq 0 ]
 then
   echo sucess
   else
-  echo not sucess
+  echo FAILURE
   fi
 
 print_head "copying nginx config for roboshop"
@@ -43,7 +43,7 @@ if [ $? -eq 0 ]
 then
   echo sucess
   else
-  echo not sucess
+  echo FAILURE
   fi
 
 print_head  "enabling nginx"
@@ -52,7 +52,7 @@ if [ $? -eq 0 ]
 then
   echo sucess
   else
-  echo not sucess
+  echo FAILURE
   fi
 
 print_head "starting nginx"
@@ -61,6 +61,6 @@ if [ $? -eq 0 ]
 then
   echo sucess
   else
-  echo not sucess
+  echo FAILURE
   fi
 
