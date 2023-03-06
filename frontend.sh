@@ -26,6 +26,6 @@ systemctl enable nginx  &>>${log_file}
 echo $?
 
 print_head "starting nginx"
-systemctl start nginx  &>>${log_file}
+sudo systemctl start nginx  &>>${log_file}
 echo $?
 
