@@ -13,7 +13,8 @@ print_head " starting momgodb server"
 systemctl start mongod  &>>${log_file}
 
 print_head " updating listing address"
-## Update listen address from 127.0.0.1 to 0.0.0.0 in /etc/mongodb.conf
+sed -i -e  's/127.0.0.1/0.0.0.0/'  /etc/mongodb.conf  &>>${log_file}
+## Updated 127.0.0.1 to 0.0.0.0 in /etc/mongodb.conf
 
 print_head " restarting the server "
 systemctl restart mongod  &>>${log_file}
