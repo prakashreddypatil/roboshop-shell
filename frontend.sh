@@ -28,4 +28,4 @@ echo $?
 print_head "starting nginx"
 systemctl start nginx  &>>${log_file}
 echo $?
-##
+
