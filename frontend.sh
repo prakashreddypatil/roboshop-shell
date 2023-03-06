@@ -7,6 +7,7 @@ then
   echo sucess
   else
   echo not sucess
+  fi
 
 print_head "removing old content"
 rm -rf /usr/share/nginx/html/*  &>>${log_file}
@@ -15,6 +16,7 @@ then
   echo sucess
   else
   echo not sucess
+  fi
 
 print_head  "downloading frontend"
 curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip  &>>${log_file}
@@ -23,6 +25,7 @@ then
   echo sucess
   else
   echo not sucess
+  fi
 
 print_head "extracting  download frontend"
 cd  /usr/share/nginx/html
@@ -32,6 +35,7 @@ then
   echo sucess
   else
   echo not sucess
+  fi
 
 print_head "copying nginx config for roboshop"
 cp ${code_dir}/configs/nginx-roboshop.conf /etc/nginx/default.d/roboshop.conf &>>${log_file}
@@ -40,6 +44,7 @@ then
   echo sucess
   else
   echo not sucess
+  fi
 
 print_head  "enabling nginx"
 systemctl enable nginx  &>>${log_file}
@@ -48,6 +53,7 @@ then
   echo sucess
   else
   echo not sucess
+  fi
 
 print_head "starting nginx"
 systemctl start nginx  &>>${log_file}
@@ -56,4 +62,5 @@ then
   echo sucess
   else
   echo not sucess
+  fi
 
