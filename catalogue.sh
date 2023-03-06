@@ -8,6 +8,9 @@ print_head "install nodjs"
 yum install nodejs -y   &>>${log_file}
 status_check $?
 
+print_head "deleting user"
+userdel roboshop &>>${log_file}
+
 print_head "create roboshop user"
 useradd roboshop  &>>${log_file}
 status_check $?
