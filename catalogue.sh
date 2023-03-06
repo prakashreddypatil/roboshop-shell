@@ -11,7 +11,7 @@ status_check $?
 
 print_head "create roboshop user"
 id roboshop  &>>${log_file}
-if [ $? -nq 0 ]
+if [ $? -ne 0 ]
 then
   useradd roboshop &>>${log_file}
   fi
