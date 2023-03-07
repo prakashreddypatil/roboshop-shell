@@ -16,11 +16,16 @@ if [ $? -ne 0  ]
   fi
  status_check $?
 
-
+print_head  "creating application directory"
 if [ ! -d /app ]
  then
    echo mkdir /app  &>>${log_file}
    fi
+status_check $?
+
+
+print_head  "delete old content"
+rm -rf /app/*  &>>${log_file}
 status_check $?
 
 print_head  "download the app content"
