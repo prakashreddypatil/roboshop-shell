@@ -19,7 +19,7 @@ if [ $? -ne 0  ]
 print_head  "creating application directory"
 if [ ! -d /app ]
  then
-   echo mkdir /app  &>>${log_file}
+   mkdir /app  &>>${log_file}
    fi
 status_check $?
 
