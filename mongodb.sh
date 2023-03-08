@@ -9,20 +9,20 @@ yum install mongodb-org -y  &>>${log_file}
 status_check $?
 
 print_head " enabling mongodb"
-systemctl enable mongod  &>>${log_file}
+systemctl enable mongodb  &>>${log_file}
 status_check $?
 
 print_head " starting momgodb server"
-systemctl start mongod  &>>${log_file}
+systemctl start mongodb  &>>${log_file}
 status_check $?
 
 
 print_head " updating listing address"
 sed  -i -e  's/127.0.0.1/0.0.0.0/'  /etc/mongod.conf   &>>${log_file}
 status_check $?
-## Updated 127.0.0.1 to 0.0.0.0 in /etc/mongodb.conf
+
 
 print_head " restart momgodb server"
-systemctl restart mongod
+systemctl restart mongodb
 status_check $?
 
