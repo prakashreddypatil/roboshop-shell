@@ -12,6 +12,7 @@ then
   echo sucess
   else
   echo FAILURE
+  echo read the log file ${log_file} for more infromation about error
   exit 1
   fi
 }
