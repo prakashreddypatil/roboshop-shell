@@ -63,7 +63,7 @@ systemctl start catalogue  &>>${log_file}
 status_check $?
 
 print_head  "copy mongodb repo file"
-cp ${code_dir}/configs/mongodb.repo  /etc/yum.repos.d/mongodb.repo  &>>${log_file}
+cp ${code_dir}/configs/mongodb.repo  /etc/yum.repos.d/mongo.repo  &>>${log_file}
 status_check $?
 
 print_head  "install mongodb schema"
