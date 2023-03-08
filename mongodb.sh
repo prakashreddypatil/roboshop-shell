@@ -25,4 +25,5 @@ status_check $?
 print_head " restart momgodb server"
 systemctl restart mongod
 status_check $?
+##
 
