@@ -9,11 +9,11 @@ yum install mongodb-org -y  &>>${log_file}
 status_check $?
 
 print_head " enabling mongodb"
-systemctl enable mongodb  &>>${log_file}
+systemctl enable mongod  &>>${log_file}
 status_check $?
 
 print_head " starting momgodb server"
-systemctl start mongodb  &>>${log_file}
+systemctl start mongod  &>>${log_file}
 status_check $?
 
 
@@ -23,6 +23,6 @@ status_check $?
 
 
 print_head " restart momgodb server"
-systemctl restart mongodb
+systemctl restart mongod
 status_check $?
 
